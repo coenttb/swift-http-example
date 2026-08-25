@@ -6,7 +6,7 @@ import Client
 extension Example.Greeting.Client.Remote where Failure == Swift.Never {
 
     public init(_ client: Example.Greeting.Client) {
-        self.init(greet: client.greet)
+        self.init(greet: .init(run: client.greet))
     }
 }
 

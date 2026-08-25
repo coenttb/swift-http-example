@@ -2,20 +2,20 @@ import Client
 import Testing
 
 @Suite
-struct `Client.Operation Tests` {
+struct `Client Tests` {
 
     @Test
-    func `an infallible operation runs without try`() async {
-        let double = Client.Operation<Int, Int, Never>(run: { value in value * 2 })
+    func `an infallible client runs without try`() async {
+        let double = Client<Int, Int, Never>(run: { value in value * 2 })
         #expect(await double(21) == 42)
     }
 
     @Test
-    func `a refusing operation throws its declared failure`() async throws {
+    func `a refusing client throws its declared failure`() async throws {
         enum Refusal: Swift.Error, Equatable {
             case negative
         }
-        let guarded = Client.Operation<Int, Int, Refusal>(
+        let guarded = Client<Int, Int, Refusal>(
             run: { value throws(Refusal) in
                 guard value >= 0 else {
                     throw .negative

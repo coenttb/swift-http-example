@@ -4,7 +4,7 @@ public import Example
 extension Example {
 
     public typealias Application<Failure: Swift.Error> =
-        Client::Client.Operation<
+        Client::Client<
             Example.Command, Example.Command.Output, Failure
         >
 }

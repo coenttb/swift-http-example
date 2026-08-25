@@ -1,4 +1,5 @@
 public import Either_Primitives
+public import Client
 public import Example
 public import Example_Counter
 public import Example_Counter_Client
@@ -19,6 +20,6 @@ extension Example.Counter.Endpoint {
     public static func responder(
         using client: Example.Counter.Client
     ) -> HTTP.Responder<HTTP.Coding.Error> {
-        counter.responder(using: client.increment)
+        counter.responder(using: .init(run: client.increment))
     }
 }

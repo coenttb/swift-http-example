@@ -1,4 +1,4 @@
-extension Client.Operation {
+extension Client {
 
     @inlinable
     public func callAsFunction(_ input: Input) async throws(Failure) -> Output {

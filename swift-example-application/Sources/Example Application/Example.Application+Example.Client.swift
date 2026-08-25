@@ -6,7 +6,7 @@ import Example_Counter_Client
 import Example_Greeting
 import Example_Greeting_Client
 
-extension Client.Operation
+extension Client
 where
     Input == Example.Command,
     Output == Example.Command.Output,
@@ -21,7 +21,7 @@ where
                     return .greeting(await client.greeting.greet(name))
 
                 case .counter(let limit):
-                    return .counter(try await client.counter.increment(limit))
+                    return .counter(try await client.counter.increment(limit: limit))
                 }
             }
         )

@@ -126,6 +126,7 @@ let package = Package(
                     name: "Example Counter Client Remote",
                     package: "swift-example-client-remote"
                 ),
+                .product(name: "Client", package: "swift-client"),
                 .product(name: "HTTP", package: "swift-http"),
                 .product(name: "HTTP Coder", package: "swift-http-coder"),
                 .product(name: "HTTP Client", package: "swift-http-client"),

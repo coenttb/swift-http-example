@@ -27,11 +27,15 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-institute/swift-example.git",
+            url: "https://github.com/swift-foundations/swift-client-macros.git",
             branch: "main"
         ),
         .package(
             url: "https://github.com/swift-foundations/swift-client.git",
+            branch: "main"
+        ),
+        .package(
+            url: "https://github.com/swift-institute/swift-example.git",
             branch: "main"
         ),
     ],
@@ -42,6 +46,7 @@ let package = Package(
                 .product(name: "Example", package: "swift-example"),
                 .product(name: "Example Greeting", package: "swift-example"),
                 .product(name: "Client", package: "swift-client"),
+                .product(name: "Client Macros", package: "swift-client-macros"),
             ]
         ),
         .target(
@@ -50,6 +55,7 @@ let package = Package(
                 .product(name: "Example", package: "swift-example"),
                 .product(name: "Example Counter", package: "swift-example"),
                 .product(name: "Client", package: "swift-client"),
+                .product(name: "Client Macros", package: "swift-client-macros"),
             ]
         ),
         .target(

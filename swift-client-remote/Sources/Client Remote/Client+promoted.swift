@@ -1,7 +1,7 @@
 public import Client
-public import Either_Primitives
+import Either_Primitives
 
-extension Client.Operation {
+extension Client {
 
     public func promoted<External: Swift.Error>() -> Remote<External> {
         .init(

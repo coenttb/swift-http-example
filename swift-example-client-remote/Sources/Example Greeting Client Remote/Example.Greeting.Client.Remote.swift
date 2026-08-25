@@ -8,10 +8,10 @@ extension Example.Greeting.Client {
     public struct Remote<Failure: Swift.Error> {
 
         public var greet:
-            Client.Operation<Example.Greeting.Name, Example.Greeting.Message, Failure>
+            Client<Example.Greeting.Name, Example.Greeting.Message, Failure>
 
         public init(
-            greet: Client.Operation<Example.Greeting.Name, Example.Greeting.Message, Failure>
+            greet: Client<Example.Greeting.Name, Example.Greeting.Message, Failure>
         ) {
             self.greet = greet
         }

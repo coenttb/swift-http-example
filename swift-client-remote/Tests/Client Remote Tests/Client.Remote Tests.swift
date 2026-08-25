@@ -4,7 +4,7 @@ import Either_Primitives
 import Testing
 
 @Suite
-struct `Client.Operation.Remote Tests` {
+struct `Client.Remote Tests` {
 
     enum Refusal: Swift.Error, Equatable {
         case negative
@@ -14,7 +14,7 @@ struct `Client.Operation.Remote Tests` {
         case down
     }
 
-    static var guarded: Client.Operation<Int, Int, Refusal> {
+    static var guarded: Client<Int, Int, Refusal> {
         .init(
             run: { value throws(Refusal) in
                 guard value >= 0 else {
@@ -27,7 +27,7 @@ struct `Client.Operation.Remote Tests` {
 
     @Test
     func `promotion embeds the domain refusal on the right`() async throws {
-        let remote: Client.Operation<Int, Int, Refusal>.Remote<Outage> = Self.guarded.promoted()
+        let remote: Client<Int, Int, Refusal>.Remote<Outage> = Self.guarded.promoted()
         #expect(try await remote(7) == 7)
         do throws(Either<Outage, Refusal>) {
             _ = try await remote(-1)
@@ -38,10 +38,10 @@ struct `Client.Operation.Remote Tests` {
     }
 
     @Test
-    func `a promoted operation collapses back at Never`() async {
-        let there: Client.Operation<Int, Int, Refusal>.Remote<Swift.Never> =
+    func `a promoted client collapses back at Never`() async {
+        let there: Client<Int, Int, Refusal>.Remote<Swift.Never> =
             Self.guarded.promoted()
-        let back: Client.Operation<Int, Int, Refusal> = there.collapsed()
+        let back: Client<Int, Int, Refusal> = there.collapsed()
         do throws(Refusal) {
             _ = try await back(-1)
             Issue.record("expected a refusal")
@@ -52,12 +52,12 @@ struct `Client.Operation.Remote Tests` {
 
     @Test
     func `an infallible remote row collapses to the external failure alone`() async {
-        let failing = Client.Operation<Int, Int, Either<Outage, Swift.Never>>(
+        let failing = Client<Int, Int, Either<Outage, Swift.Never>>(
             run: { _ throws(Either<Outage, Swift.Never>) in
                 throw .left(.down)
             }
         )
-        let collapsed: Client.Operation<Int, Int, Outage> = failing.collapsed()
+        let collapsed: Client<Int, Int, Outage> = failing.collapsed()
         do throws(Outage) {
             _ = try await collapsed(1)
             Issue.record("expected an outage")

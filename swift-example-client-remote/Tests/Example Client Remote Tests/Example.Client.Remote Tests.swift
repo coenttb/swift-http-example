@@ -32,9 +32,9 @@ struct `Example.Client.Remote Tests` {
     func `remote at Never is isomorphic to the client, forward`() async throws {
         let remote = Example.Client.Remote<Swift.Never>(Self.client(from: .init(1)))
         #expect(await remote.greeting.greet(.init("Ada")) == .init("Hello, Ada!"))
-        #expect(try await remote.counter.increment(.init(3)) == .init(2))
+        #expect(try await remote.counter.increment(limit: .init(3)) == .init(2))
         do throws(Either<Swift.Never, Example.Counter.Error>) {
-            _ = try await remote.counter.increment(.init(2))
+            _ = try await remote.counter.increment(limit: .init(2))
             Issue.record("expected a refusal")
         } catch {
             #expect(error.value == .limit(reached: .init(2)))
@@ -47,9 +47,9 @@ struct `Example.Client.Remote Tests` {
             Example.Client.Remote<Swift.Never>(Self.client(from: .init(1)))
         )
         #expect(await recovered.greeting.greet(.init("Ada")) == .init("Hello, Ada!"))
-        #expect(try await recovered.counter.increment(.init(3)) == .init(2))
+        #expect(try await recovered.counter.increment(limit: .init(3)) == .init(2))
         do throws(Example.Counter.Error) {
-            _ = try await recovered.counter.increment(.init(2))
+            _ = try await recovered.counter.increment(limit: .init(2))
             Issue.record("expected a refusal")
         } catch {
             #expect(error == .limit(reached: .init(2)))
@@ -74,7 +74,7 @@ struct `Example.Client.Remote Tests` {
         }
 
         let refusing = Example.Counter.Client.Remote<Outage>(
-            increment: Client.Operation(
+            increment: Client(
                 run: { (limit: Example.Counter.Limit) throws(Example.Counter.Error) in
                     try Example.Counter.increment(.init(3), limit: limit)
                 }

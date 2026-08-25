@@ -23,8 +23,8 @@ struct `Example.Client Tests` {
             )
         )
         #expect(await client.greeting.greet(.init("x")) == .init("hi x"))
-        #expect(try await client.counter.increment(.init(9)) == .init(1))
-        #expect(try await client.counter.increment(.init(9)) == .init(2))
+        #expect(try await client.counter.increment(limit: .init(9)) == .init(1))
+        #expect(try await client.counter.increment(limit: .init(9)) == .init(2))
     }
 
     @Test
@@ -35,7 +35,7 @@ struct `Example.Client Tests` {
                 }
         )
         do throws(Example.Counter.Error) {
-            _ = try await client.increment(.init(5))
+            _ = try await client.increment(limit: .init(5))
             Issue.record("expected a refusal")
         } catch {
             #expect(error == .limit(reached: .init(5)))

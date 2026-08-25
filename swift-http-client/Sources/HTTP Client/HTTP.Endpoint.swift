@@ -9,7 +9,7 @@ extension HTTP.Endpoint {
 
     public func client<TransportFailure: Swift.Error, Output, DomainFailure: Swift.Error>(
         using transport: HTTP.Client<TransportFailure>
-    ) -> Client::Client.Operation<
+    ) -> Client::Client<
         RequestCoder.Output,
         Output,
         Either<Either<TransportFailure, HTTP.Coding.Error>, DomainFailure>

@@ -1,9 +1,9 @@
 public import Client
 public import Either_Primitives
 
-extension Client.Operation {
+extension Client {
 
-    public func collapsed<External: Swift.Error>() -> Client.Operation<Input, Output, External>
+    public func collapsed<External: Swift.Error>() -> Client<Input, Output, External>
     where Failure == Either<External, Swift.Never> {
         .init(
             run: { input throws(External) in
@@ -16,7 +16,7 @@ extension Client.Operation {
         )
     }
 
-    public func collapsed<Refusal: Swift.Error>() -> Client.Operation<Input, Output, Refusal>
+    public func collapsed<Refusal: Swift.Error>() -> Client<Input, Output, Refusal>
     where Failure == Either<Swift.Never, Refusal> {
         .init(
             run: { input throws(Refusal) in

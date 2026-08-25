@@ -9,7 +9,7 @@ import Example_Counter_Client_Remote
 import Example_Greeting
 import Example_Greeting_Client_Remote
 
-extension Client.Operation
+extension Client
 where
     Input == Example.Command,
     Output == Example.Command.Output

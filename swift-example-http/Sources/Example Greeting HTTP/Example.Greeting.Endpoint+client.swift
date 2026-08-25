@@ -15,7 +15,7 @@ extension Example.Greeting.Endpoint {
     public static func remote<TransportFailure: Swift.Error>(
         using transport: HTTP.Client<TransportFailure>
     ) -> Example.Greeting.Client.Remote<Either<TransportFailure, HTTP.Coding.Error>> {
-        let operation: Client.Operation<
+        let operation: Client<
             Example.Greeting.Name,
             Example.Greeting.Message,
             Either<Either<TransportFailure, HTTP.Coding.Error>, Swift.Never>
@@ -27,6 +27,6 @@ extension Example.Greeting.Endpoint {
     public static func responder(
         using client: Example.Greeting.Client
     ) -> HTTP.Responder<HTTP.Coding.Error> {
-        greeting.responder(using: client.greet)
+        greeting.responder(using: .init(run: client.greet))
     }
 }

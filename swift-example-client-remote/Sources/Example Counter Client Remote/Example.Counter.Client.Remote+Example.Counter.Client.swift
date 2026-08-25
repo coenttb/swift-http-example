@@ -8,7 +8,17 @@ import Either_Primitives
 extension Example.Counter.Client.Remote where Failure == Swift.Never {
 
     public init(_ client: Example.Counter.Client) {
-        self.init(increment: client.increment.promoted())
+        self.init(
+            increment: .init(
+                run: { limit throws(Either<Swift.Never, Example.Counter.Error>) in
+                    do throws(Example.Counter.Error) {
+                        return try await client.increment(limit: limit)
+                    } catch {
+                        throw .right(error)
+                    }
+                }
+            )
+        )
     }
 }
 

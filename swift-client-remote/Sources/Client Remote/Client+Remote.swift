@@ -1,8 +1,8 @@
 public import Client
 public import Either_Primitives
 
-extension Client.Operation {
+extension Client {
 
     public typealias Remote<External: Swift.Error> =
-        Client.Operation<Input, Output, Either<External, Failure>>
+        Client<Input, Output, Either<External, Failure>>
 }

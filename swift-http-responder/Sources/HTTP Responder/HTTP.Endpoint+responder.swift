@@ -8,7 +8,7 @@ import Serializer_Primitive
 extension HTTP.Endpoint {
 
     public func responder<Output, DomainFailure: Swift.Error>(
-        using service: Client.Operation<RequestCoder.Output, Output, DomainFailure>
+        using service: Client<RequestCoder.Output, Output, DomainFailure>
     ) -> HTTP.Responder<HTTP.Coding.Error>
     where ResponseCoder.Output == Either<DomainFailure, Output> {
         .init(
