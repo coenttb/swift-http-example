@@ -1,0 +1,6 @@
+.DS_Store
+.build/
+.snapshots/
+DerivedData/
+xcuserdata/
+example.xcworkspace/xcshareddata/swiftpm/
