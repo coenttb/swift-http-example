@@ -2,7 +2,7 @@ public import Example
 
 extension Example.Counter {
 
-    public struct Value: Sendable, Equatable {
+    public struct Value: Equatable {
 
         public let underlying: Swift.Int
 

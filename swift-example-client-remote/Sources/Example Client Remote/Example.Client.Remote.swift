@@ -9,7 +9,7 @@ public import Example_Greeting_Client_Remote
 
 extension Example.Client {
 
-    public struct Remote<Failure: Swift.Error>: Sendable {
+    public struct Remote<Failure: Swift.Error> {
 
         public var greeting: Example.Greeting.Client.Remote<Failure>
 

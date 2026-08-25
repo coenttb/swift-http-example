@@ -12,9 +12,9 @@ let package = Package(
         .visionOS(.v27),
     ],
     products: [
-        .executable(
-            name: "example-remote",
-            targets: ["example-remote"]
+        .library(
+            name: "Example Application Remote",
+            targets: ["Example Application Remote"]
         )
     ],
     dependencies: [
@@ -36,14 +36,6 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/swift-foundations/swift-client.git",
-            branch: "main"
-        ),
-        .package(
-            url: "https://github.com/swift-foundations/swift-client-remote.git",
-            branch: "main"
-        ),
-        .package(
-            url: "https://github.com/swift-foundations/swift-application.git",
             branch: "main"
         ),
         .package(
@@ -70,37 +62,11 @@ let package = Package(
                 .product(name: "Example Client Remote", package: "swift-example-client-remote"),
                 .product(name: "Example Application", package: "swift-example-application"),
                 .product(name: "Client", package: "swift-client"),
-                .product(name: "Application", package: "swift-application"),
-                .product(name: "Either Primitives", package: "swift-either-primitives"),
-            ]
-        ),
-        .executableTarget(
-            name: "example-remote",
-            dependencies: [
-                "Example Application Remote",
-                .product(name: "Example", package: "swift-example"),
-                .product(name: "Example Greeting", package: "swift-example"),
-                .product(name: "Example Counter", package: "swift-example"),
-                .product(name: "Example Client", package: "swift-example-client"),
-                .product(
-                    name: "Example Greeting Client Remote",
-                    package: "swift-example-client-remote"
-                ),
-                .product(
-                    name: "Example Counter Client Remote",
-                    package: "swift-example-client-remote"
-                ),
-                .product(name: "Example Client Remote", package: "swift-example-client-remote"),
-                .product(name: "Example Application", package: "swift-example-application"),
-                .product(name: "Example CLI", package: "swift-example-application"),
-                .product(name: "Client", package: "swift-client"),
-                .product(name: "Client Remote", package: "swift-client-remote"),
-                .product(name: "Application", package: "swift-application"),
                 .product(name: "Either Primitives", package: "swift-either-primitives"),
             ]
         ),
         .testTarget(
-            name: "example-remote Tests",
+            name: "Example Application Remote Tests",
             dependencies: [
                 "Example Application Remote",
                 .product(name: "Example", package: "swift-example"),
@@ -118,8 +84,6 @@ let package = Package(
                 .product(name: "Example Client Remote", package: "swift-example-client-remote"),
                 .product(name: "Example Application", package: "swift-example-application"),
                 .product(name: "Client", package: "swift-client"),
-                .product(name: "Client Remote", package: "swift-client-remote"),
-                .product(name: "Application", package: "swift-application"),
                 .product(name: "Either Primitives", package: "swift-either-primitives"),
             ]
         ),
@@ -128,7 +92,7 @@ let package = Package(
 )
 
 for target in package.targets where ![.system, .binary, .plugin, .macro].contains(target.type) {
-    let ecosystem: [SwiftSetting] = [
+    target.swiftSettings = (target.swiftSettings ?? []) + [
         .strictMemorySafety(),
         .enableUpcomingFeature("ExistentialAny"),
         .enableUpcomingFeature("InternalImportsByDefault"),
@@ -137,8 +101,4 @@ for target in package.targets where ![.system, .binary, .plugin, .macro].contain
         .enableExperimentalFeature("Lifetimes"),
         .enableUpcomingFeature("InferIsolatedConformances"),
     ]
-
-    let package: [SwiftSetting] = []
-
-    target.swiftSettings = (target.swiftSettings ?? []) + ecosystem + package
 }

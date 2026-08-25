@@ -16,14 +16,6 @@ let package = Package(
             name: "Example Application",
             targets: ["Example Application"]
         ),
-        .library(
-            name: "Example CLI",
-            targets: ["Example CLI"]
-        ),
-        .library(
-            name: "Example Client Local",
-            targets: ["Example Client Local"]
-        ),
     ],
     dependencies: [
         .package(
@@ -38,36 +30,10 @@ let package = Package(
             url: "https://github.com/swift-foundations/swift-client.git",
             branch: "main"
         ),
-        .package(
-            url: "https://github.com/swift-foundations/swift-application.git",
-            branch: "main"
-        ),
     ],
     targets: [
         .target(
             name: "Example Application",
-            dependencies: [
-                .product(name: "Example", package: "swift-example"),
-                .product(name: "Example Greeting", package: "swift-example"),
-                .product(name: "Example Counter", package: "swift-example"),
-                .product(name: "Example Greeting Client", package: "swift-example-client"),
-                .product(name: "Example Counter Client", package: "swift-example-client"),
-                .product(name: "Example Client", package: "swift-example-client"),
-                .product(name: "Client", package: "swift-client"),
-                .product(name: "Application", package: "swift-application"),
-            ]
-        ),
-        .target(
-            name: "Example CLI",
-            dependencies: [
-                "Example Application",
-                .product(name: "Example", package: "swift-example"),
-                .product(name: "Example Greeting", package: "swift-example"),
-                .product(name: "Example Counter", package: "swift-example"),
-            ]
-        ),
-        .target(
-            name: "Example Client Local",
             dependencies: [
                 .product(name: "Example", package: "swift-example"),
                 .product(name: "Example Greeting", package: "swift-example"),
@@ -82,22 +48,13 @@ let package = Package(
             name: "Example Application Tests",
             dependencies: [
                 "Example Application",
-                "Example Client Local",
                 .product(name: "Example", package: "swift-example"),
                 .product(name: "Example Greeting", package: "swift-example"),
                 .product(name: "Example Counter", package: "swift-example"),
+                .product(name: "Example Greeting Client", package: "swift-example-client"),
+                .product(name: "Example Counter Client", package: "swift-example-client"),
                 .product(name: "Example Client", package: "swift-example-client"),
-                .product(name: "Application", package: "swift-application"),
-            ]
-        ),
-        .testTarget(
-            name: "Example CLI Tests",
-            dependencies: [
-                "Example Application",
-                "Example CLI",
-                .product(name: "Example", package: "swift-example"),
-                .product(name: "Example Greeting", package: "swift-example"),
-                .product(name: "Example Counter", package: "swift-example"),
+                .product(name: "Client", package: "swift-client"),
             ]
         ),
     ],
@@ -105,7 +62,7 @@ let package = Package(
 )
 
 for target in package.targets where ![.system, .binary, .plugin, .macro].contains(target.type) {
-    let ecosystem: [SwiftSetting] = [
+    target.swiftSettings = (target.swiftSettings ?? []) + [
         .strictMemorySafety(),
         .enableUpcomingFeature("ExistentialAny"),
         .enableUpcomingFeature("InternalImportsByDefault"),
@@ -114,8 +71,4 @@ for target in package.targets where ![.system, .binary, .plugin, .macro].contain
         .enableExperimentalFeature("Lifetimes"),
         .enableUpcomingFeature("InferIsolatedConformances"),
     ]
-
-    let package: [SwiftSetting] = []
-
-    target.swiftSettings = (target.swiftSettings ?? []) + ecosystem + package
 }

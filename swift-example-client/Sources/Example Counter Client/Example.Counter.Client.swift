@@ -4,19 +4,18 @@ public import Example_Counter
 
 extension Example.Counter {
     
-    public struct Client: Sendable {
-        
-        public var increment:
-        Client::Client.Operation<
-            Example.Counter.Increment, Example.Counter.Value, Example.Counter.Error
+    public struct Client {
+
+        public let increment: Client::Client.Operation<
+            Example.Counter.Limit, Example.Counter.Value, Example.Counter.Error
         >
-        
+
         public init(
-            increment: Client::Client.Operation<
-            Example.Counter.Increment, Example.Counter.Value, Example.Counter.Error
-            >
+            increment: @escaping (
+                Example.Counter.Limit
+            ) async throws(Example.Counter.Error) -> Example.Counter.Value
         ) {
-            self.increment = increment
+            self.increment = .init(run: increment)
         }
     }
 }

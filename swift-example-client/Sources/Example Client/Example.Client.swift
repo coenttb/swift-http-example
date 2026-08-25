@@ -6,7 +6,7 @@ public import Example_Greeting_Client
 
 extension Example {
 
-    public struct Client: Sendable {
+    public struct Client {
 
         public var greeting: Example.Greeting.Client
 

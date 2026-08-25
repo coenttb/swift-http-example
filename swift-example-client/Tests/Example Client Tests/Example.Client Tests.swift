@@ -12,32 +12,30 @@ struct `Example.Client Tests` {
 
     @Test
     func `root client composes both subclients`() async throws {
+        var current = Example.Counter.Value(0)
         let client = Example.Client(
-            greeting: .init(greet: .init(run: { name in .init("hi \(name.underlying)") })),
+            greeting: .init(greet: { name in .init("hi \(name.underlying)") }),
             counter: .init(
-                increment: .init(
-                    run: { increment throws(Example.Counter.Error) in increment.value }
-                )
+                increment: { limit throws(Example.Counter.Error) in
+                        current = try Example.Counter.increment(current, limit: limit)
+                        return current
+                    }
             )
         )
         #expect(await client.greeting.greet(.init("x")) == .init("hi x"))
-        #expect(
-            try await client.counter.increment(.init(value: .init(7), limit: .init(9)))
-                == .init(7)
-        )
+        #expect(try await client.counter.increment(.init(9)) == .init(1))
+        #expect(try await client.counter.increment(.init(9)) == .init(2))
     }
 
     @Test
     func `counter client surfaces the declared domain refusal`() async {
         let client = Example.Counter.Client(
-            increment: .init(
-                run: { increment throws(Example.Counter.Error) in
-                    try Example.Counter.increment(increment.value, limit: increment.limit)
+            increment: { limit throws(Example.Counter.Error) in
+                    try Example.Counter.increment(.init(5), limit: limit)
                 }
-            )
         )
         do throws(Example.Counter.Error) {
-            _ = try await client.increment(.init(value: .init(5), limit: .init(5)))
+            _ = try await client.increment(.init(5))
             Issue.record("expected a refusal")
         } catch {
             #expect(error == .limit(reached: .init(5)))

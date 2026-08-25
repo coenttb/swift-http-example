@@ -7,16 +7,16 @@ public import Example_Counter_Client
 
 extension Example.Counter.Client {
 
-    public struct Remote<Failure: Swift.Error>: Sendable {
+    public struct Remote<Failure: Swift.Error> {
 
         public var increment:
             Client.Operation<
-                Example.Counter.Increment, Example.Counter.Value, Example.Counter.Error
+                Example.Counter.Limit, Example.Counter.Value, Example.Counter.Error
             >.Remote<Failure>
 
         public init(
             increment: Client.Operation<
-                Example.Counter.Increment, Example.Counter.Value, Example.Counter.Error
+                Example.Counter.Limit, Example.Counter.Value, Example.Counter.Error
             >.Remote<Failure>
         ) {
             self.increment = increment

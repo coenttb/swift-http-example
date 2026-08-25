@@ -8,24 +8,33 @@
       location = "group:swift-client-remote">
    </FileRef>
    <FileRef
-      location = "group:swift-application">
+      location = "group:swift-http">
+   </FileRef>
+   <FileRef
+      location = "group:swift-http-coder">
+   </FileRef>
+   <FileRef
+      location = "group:swift-http-client">
+   </FileRef>
+   <FileRef
+      location = "group:swift-http-responder">
    </FileRef>
    <FileRef
       location = "group:swift-example">
-   </FileRef>
-   <FileRef
-      location = "group:swift-example-application">
-   </FileRef>
-   <FileRef
-      location = "group:swift-example-application-local">
-   </FileRef>
-   <FileRef
-      location = "group:swift-example-application-remote">
    </FileRef>
    <FileRef
       location = "group:swift-example-client">
    </FileRef>
    <FileRef
       location = "group:swift-example-client-remote">
+   </FileRef>
+   <FileRef
+      location = "group:swift-example-application">
+   </FileRef>
+   <FileRef
+      location = "group:swift-example-application-remote">
+   </FileRef>
+   <FileRef
+      location = "group:swift-example-http">
    </FileRef>
 </Workspace>

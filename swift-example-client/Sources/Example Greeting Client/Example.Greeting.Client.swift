@@ -4,15 +4,15 @@ public import Example_Greeting
 
 extension Example.Greeting {
 
-    public struct Client: Sendable {
+    public struct Client {
 
-        public var greet:
-        Client::Client.Operation<Example.Greeting.Name, Example.Greeting.Message, Swift.Never>
+        public let greet:
+            Client::Client.Operation<Example.Greeting.Name, Example.Greeting.Message, Swift.Never>
 
         public init(
-            greet: Client::Client.Operation<Example.Greeting.Name, Example.Greeting.Message, Swift.Never>
+            greet: @escaping (Example.Greeting.Name) async -> Example.Greeting.Message
         ) {
-            self.greet = greet
+            self.greet = .init(run: greet)
         }
     }
 }

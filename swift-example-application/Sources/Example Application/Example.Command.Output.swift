@@ -4,10 +4,10 @@ public import Example_Greeting
 
 extension Example.Command {
 
-    public enum Output: Sendable, Equatable {
+    public enum Output: Equatable {
 
-        case greet(Example.Greeting.Message)
+        case greeting(Example.Greeting.Message)
 
-        case increment(Example.Counter.Value)
+        case counter(Example.Counter.Value)
     }
 }

@@ -15,6 +15,6 @@ extension Example.Counter.Client.Remote where Failure == Swift.Never {
 extension Example.Counter.Client {
 
     public init(_ remote: Example.Counter.Client.Remote<Swift.Never>) {
-        self.init(increment: remote.increment.collapsed())
+        self.init(increment: remote.increment.collapsed().run)
     }
 }

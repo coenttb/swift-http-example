@@ -2,7 +2,7 @@ public import Example
 
 extension Example.Greeting {
 
-    public struct Message: Sendable, Equatable {
+    public struct Message: Equatable {
 
         public let underlying: Swift.String
 

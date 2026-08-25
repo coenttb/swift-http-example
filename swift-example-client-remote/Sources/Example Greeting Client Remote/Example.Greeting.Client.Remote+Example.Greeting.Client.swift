@@ -13,6 +13,6 @@ extension Example.Greeting.Client.Remote where Failure == Swift.Never {
 extension Example.Greeting.Client {
 
     public init(_ remote: Example.Greeting.Client.Remote<Swift.Never>) {
-        self.init(greet: remote.greet)
+        self.init(greet: remote.greet.run)
     }
 }
