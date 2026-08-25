@@ -8,6 +8,21 @@
       location = "group:swift-client-remote">
    </FileRef>
    <FileRef
+      location = "group:swift-witness-derivation">
+   </FileRef>
+   <FileRef
+      location = "group:swift-prism-derivation">
+   </FileRef>
+   <FileRef
+      location = "group:swift-eliminator-derivation">
+   </FileRef>
+   <FileRef
+      location = "group:swift-call-derivation">
+   </FileRef>
+   <FileRef
+      location = "group:swift-algebra-derivation">
+   </FileRef>
+   <FileRef
       location = "group:swift-http">
    </FileRef>
    <FileRef
