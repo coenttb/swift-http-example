@@ -39,7 +39,7 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-application-primitives.git",
+            url: "https://github.com/swift-foundations/swift-application.git",
             branch: "main"
         ),
     ],
@@ -54,7 +54,7 @@ let package = Package(
                 .product(name: "Example Counter Client", package: "swift-example-client"),
                 .product(name: "Example Client", package: "swift-example-client"),
                 .product(name: "Client", package: "swift-client"),
-                .product(name: "Application Primitives", package: "swift-application-primitives"),
+                .product(name: "Application", package: "swift-application"),
             ]
         ),
         .target(
@@ -87,7 +87,7 @@ let package = Package(
                 .product(name: "Example Greeting", package: "swift-example"),
                 .product(name: "Example Counter", package: "swift-example"),
                 .product(name: "Example Client", package: "swift-example-client"),
-                .product(name: "Application Primitives", package: "swift-application-primitives"),
+                .product(name: "Application", package: "swift-application"),
             ]
         ),
         .testTarget(

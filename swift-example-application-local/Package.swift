@@ -31,7 +31,7 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-application-primitives.git",
+            url: "https://github.com/swift-foundations/swift-application.git",
             branch: "main"
         ),
     ],
@@ -45,7 +45,7 @@ let package = Package(
                 .product(name: "Example Application", package: "swift-example-application"),
                 .product(name: "Example CLI", package: "swift-example-application"),
                 .product(name: "Example Client Local", package: "swift-example-application"),
-                .product(name: "Application Primitives", package: "swift-application-primitives"),
+                .product(name: "Application", package: "swift-application"),
             ]
         )
     ],

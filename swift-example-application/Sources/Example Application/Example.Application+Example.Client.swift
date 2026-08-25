@@ -1,4 +1,4 @@
-public import Application_Primitives
+public import Application
 public import Example
 public import Example_Client
 import Client

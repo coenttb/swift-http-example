@@ -1,4 +1,4 @@
-public import Application_Primitives
+public import Application
 public import Either_Primitives
 public import Example
 public import Example_Application

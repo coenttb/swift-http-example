@@ -8,7 +8,7 @@
       location = "group:swift-client-remote">
    </FileRef>
    <FileRef
-      location = "group:../swift-primitives/swift-application-primitives">
+      location = "group:swift-application">
    </FileRef>
    <FileRef
       location = "group:swift-example">

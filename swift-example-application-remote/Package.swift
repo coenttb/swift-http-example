@@ -43,7 +43,7 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-application-primitives.git",
+            url: "https://github.com/swift-foundations/swift-application.git",
             branch: "main"
         ),
         .package(
@@ -70,7 +70,7 @@ let package = Package(
                 .product(name: "Example Client Remote", package: "swift-example-client-remote"),
                 .product(name: "Example Application", package: "swift-example-application"),
                 .product(name: "Client", package: "swift-client"),
-                .product(name: "Application Primitives", package: "swift-application-primitives"),
+                .product(name: "Application", package: "swift-application"),
                 .product(name: "Either Primitives", package: "swift-either-primitives"),
             ]
         ),
@@ -95,7 +95,7 @@ let package = Package(
                 .product(name: "Example CLI", package: "swift-example-application"),
                 .product(name: "Client", package: "swift-client"),
                 .product(name: "Client Remote", package: "swift-client-remote"),
-                .product(name: "Application Primitives", package: "swift-application-primitives"),
+                .product(name: "Application", package: "swift-application"),
                 .product(name: "Either Primitives", package: "swift-either-primitives"),
             ]
         ),
@@ -119,7 +119,7 @@ let package = Package(
                 .product(name: "Example Application", package: "swift-example-application"),
                 .product(name: "Client", package: "swift-client"),
                 .product(name: "Client Remote", package: "swift-client-remote"),
-                .product(name: "Application Primitives", package: "swift-application-primitives"),
+                .product(name: "Application", package: "swift-application"),
                 .product(name: "Either Primitives", package: "swift-either-primitives"),
             ]
         ),
