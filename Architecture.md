@@ -158,7 +158,7 @@ prisms:
 ```swift
 extension Example.Counter {
     @Parser.Builder
-    public static var router: some Coder<HTTP.Request?, Call, HTTP.Request?, HTTP.Route.Error> {
+    public static var router: some Coder<HTTP.Route.Input, Call, HTTP.Route.Input, HTTP.Route.Error> {
         OneOf {
             HTTP.Route.Case(Call.prisms.increment) {
                 HTTP.Route.Method(.post)
@@ -186,7 +186,14 @@ Rules:
   root prisms. Prefixes are declared once, at the mount.
 - `HTTP.Route.Input` is the structured consumption record (method, decoded
   path segments, ordered query pairs, headers, body bytes) — components are
-  split before percent-decoding; `%2F` is never a separator.
+  split before percent-decoding; `%2F` is never a separator. Routers are
+  typed over the record, because mounting composes there (a prefix consumes
+  decoded segments); the `HTTP.Request?` boundary is crossed exactly once,
+  at the root mount. Leftover-query strictness (ruled): after the alternation
+  selects, surplus input is `malformed`, checked at the mount, never
+  per-branch; where one branch's consumed query set is a subset of a
+  sibling's, more-specific-first ordering is mandatory and the law suite
+  pins it.
 - `HTTP.Route.Error` distinguishes `noMatch`, `malformed`, and `unprintable`.
   `OneOf` continues past `noMatch` only.
 
