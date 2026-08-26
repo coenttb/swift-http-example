@@ -139,6 +139,16 @@ macro that generates `Client` is `@Client`.
 Macros expand where the `Signature` text lives; nothing can derive from a
 protocol declared in another module.
 
+Generated code spells every macro-introduced type reference by its full name,
+module-anchored with the module-selector spelling (`Module::Type.Nest`)
+wherever the macro knows the module — expansions land in arbitrary lexical
+contexts and must be immune to shadowing at the expansion site. `Swift`
+vocabulary is spelled `Swift.Never`, `Swift.Void`. Author-supplied types from
+the attached declaration are reproduced verbatim, since a syntax-only macro
+cannot know their modules. Until SwiftSyntax grows a module-selector node,
+the `Module::` tokens are emitted via the splice already proven in the
+`@Algebra` implementation.
+
 ## Routes
 
 Each domain declares one router: a bidirectional coder between HTTP requests
