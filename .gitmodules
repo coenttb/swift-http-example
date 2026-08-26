@@ -40,12 +40,6 @@
 [submodule "swift-example-client-remote"]
 	path = swift-example-client-remote
 	url = https://github.com/swift-institute/swift-example-client-remote.git
-[submodule "swift-example-application"]
-	path = swift-example-application
-	url = https://github.com/swift-institute/swift-example-application.git
-[submodule "swift-example-application-remote"]
-	path = swift-example-application-remote
-	url = https://github.com/swift-institute/swift-example-application-remote.git
 [submodule "swift-example-http"]
 	path = swift-example-http
 	url = https://github.com/swift-institute/swift-example-http.git

@@ -44,12 +44,6 @@
       location = "group:swift-example-client-remote">
    </FileRef>
    <FileRef
-      location = "group:swift-example-application">
-   </FileRef>
-   <FileRef
-      location = "group:swift-example-application-remote">
-   </FileRef>
-   <FileRef
       location = "group:swift-example-http">
    </FileRef>
 </Workspace>
