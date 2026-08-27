@@ -1,39 +1,67 @@
 # Swift Example Architecture
 
-This workspace is the handwritten syntax canary for one reusable vertical:
+The workspace is the minimal canary for:
 
 ```text
-domain → client algebra → bidirectional HTTP coding → application
+domain → client algebra → call algebra → bidirectional HTTP routing
+       → remote client / responder → application
 ```
 
-The checked-in Swift sources are the proposal. They intentionally express the
-desired call sites before generic upstream infrastructure is changed. This
-checkpoint is therefore structural and has not yet earned compiler evidence.
+The current checkout is a migration checkpoint. Its Swift and manifests parse,
+but package resolution and type-checking are not yet authoritative because the
+new canonical repositories have not all been published.
 
-## Packages
+## Ownership
 
-| Package | Owns |
+| Package | Sole responsibility |
 |---|---|
-| `swift-example` | Domain namespaces, values, refusals, and pure behavior |
-| `swift-example-client` | Transport-independent signatures and their derived clients and calls |
-| `swift-example-http` | Intrinsic value coders, request routers, and response coders |
-| `swift-example-application` | Live client interpretation and application assembly |
+| `swift-example` | Domain values, refusals, and behavior |
+| `swift-client` | One effectful client arrow |
+| `swift-call` | Call branch, coverage, and result algebra |
+| `swift-coder` | Generic bidirectional case lifting and alternatives |
+| `swift-router` | Carrier-neutral routing and ordered rejection |
+| `swift-witness-derivation` | `@Witness` |
+| `swift-prism-derivation` | `@Prisms` |
+| `swift-eliminator-derivation` | `@Eliminator` |
+| `swift-call-derivation` | `@Calls` |
+| `swift-client-derivation` | `@Client` |
+| `swift-example-client` | Example client signatures |
+| `swift-http` | The `HTTP` namespace over the HTTP standards model |
+| `swift-http-coder` | HTTP response and content coding |
+| `swift-http-router` | HTTP interpretation of generic routing |
+| `swift-http-client` | Remote HTTP interpretation of a whole call algebra |
+| `swift-http-responder` | Request-to-call and result-to-response interpretation |
+| `swift-example-http` | Example routes and response representations |
+| `swift-example-application` | Live behavior and assembly |
 
-`swift-example-client-remote` is absent. A remote client is an interpretation
-of the same client algebra, not another handwritten domain mirror.
+A case lift is `Coder.Case`; alternatives are `Coder.OneOf`. HTTP does not own
+either algebra.
 
-Generic client, HTTP, coder, and derivation packages are upstream dependencies.
-They remain read-only during this syntax pass.
+## Dependency direction
 
-## Domain
+```text
+swift-call ───────────────┐
+                         ├→ swift-router ─→ swift-http-router
+swift-coder ──────────────┘                         │
+                                                   ├→ swift-http-client
+swift-http ─────────────────────────────────────────┤
+swift-http-coder ───────────────────────────────────┴→ swift-http-responder
 
-`swift-example` has no dependencies. `Example.Greeting` demonstrates an
-infallible operation. `Example.Counter` demonstrates a typed domain refusal.
-Neither domain knows about clients, HTTP, coding failures, or transport.
+swift-witness-derivation ─→ swift-client-derivation
+swift-call + prism/eliminator derivation ─→ swift-call-derivation
 
-## Client algebra
+swift-example ─→ swift-example-client ─→ swift-example-http
+                                           │
+                                           └→ swift-example-application
+```
 
-Each domain declares only its effect signature:
+The manifests retain canonical GitHub URLs. `example.xcworkspace` supplies
+local substitution.
+
+## Domain and client algebra
+
+Domains contain no HTTP or transport concepts. Each leaf declares one client
+signature:
 
 ```swift
 extension Example.Counter {
@@ -45,7 +73,7 @@ extension Example.Counter {
 }
 ```
 
-The root composes subdomain clients through property requirements:
+The root composes child clients:
 
 ```swift
 extension Example {
@@ -58,134 +86,143 @@ extension Example {
 }
 ```
 
-`@Client` derives the client product, natural methods, initializers, call
-interpretation, and the generic remote interpretation. `@Calls` derives the
-call and result coproducts, their case optics, and exhaustive composition.
-Prisms and elimination are composed implementation capabilities, not extra
-domain-author concepts.
+`@Calls` derives the call coproduct, total result coproduct, prisms, branch
+identifiers, and coverage product. `@Client` derives the transport-independent
+witness and `Client.Remote<External>`. The remote view is reconstructed from one
+`Client<Call, Call.Result, External>` arrow; it is not implemented once per
+endpoint.
 
-The universal effectful arrow remains the semantic runtime primitive. Domain
-clients never acquire a transport or source-failure generic.
-
-## HTTP
-
-Request routing and response coding are separate bidirectional declarations:
+For a fallible operation, the total call result contains
+`Swift.Result<Output, Refusal>`. The remote view exposes
+`Either<External, Refusal>`, preserving:
 
 ```text
-HTTP.Request ⇄ Example.Call
-Example.Call.Result ⇄ HTTP.Response
+external transport/coding failure + domain refusal
 ```
 
-The root router mounts subdomain routers:
+## HTTP model
+
+RFC 9110 owns version-independent semantics:
 
 ```swift
-HTTP.Request.Coder(Example.Call.self) {
-    OneOf {
-        Case(\.greeting) {
-            HTTP.Request.Path { "greeting" }
-            Example.Greeting.router
-        }
-        Case(\.counter) {
-            HTTP.Request.Path { "counter" }
-            Example.Counter.router
+HTTP.Message.Request<Content>
+HTTP.Message.Response<Content>
+HTTP.Method
+HTTP.Target
+HTTP.Status
+HTTP.Field
+HTTP.Message.Headers
+HTTP.Message.Trailers
+```
+
+Request and response content remain generic. `[Byte]` is one adapter choice,
+not the definition of HTTP content. Version-specific framing remains under the
+corresponding HTTP version namespace and is outside semantic routing.
+
+## Routing
+
+Routing follows the noun, capability, gerund, and provider pattern:
+
+```text
+HTTP.Router
+HTTP.Router.Protocol
+HTTP.Routing<Domain>
+HTTP.Routable
+```
+
+A leaf route states only HTTP policy and intrinsic value coding:
+
+```swift
+extension Example.Greeting: HTTP.Routable {
+    public static var router: some HTTP.Routing<Self> {
+        HTTP.Target.resource(.init(unchecked: "/greeting"))
+        HTTP.Method.post
+        HTTP.Content(Name.self)
+    }
+}
+```
+
+The builder lifts the value through the unique derived call prism. A composed
+domain names every child branch without exposing the call coproduct:
+
+```swift
+extension Example: HTTP.Routable {
+    public static var router: some HTTP.Routing<Self> {
+        HTTP.Route(\.greeting) { Greeting.router }
+        HTTP.Route(\.counter) { Counter.router }
+    }
+}
+```
+
+The route builder folds derived branch identifiers into a structural coverage
+product. `HTTP.Routable` requires that product to equal `Call.Coverage`, making a
+missing, duplicate, extra, or reordered route a type error.
+
+`Router.Rejection.retry` is non-consuming: a route that permits retry
+must leave its input or output carrier unchanged. Ordered alternatives therefore
+do not impose `Copyable` merely to create checkpoints.
+
+Parsing and serialization operate on semantic
+`HTTP.Message.Request<Content>`. Wire parsing and framing do not enter the
+domain router.
+
+## Response coding
+
+Responses remain separate from request routing so authentication, logging,
+authorization, caching, and other application behavior can run between the
+parsed call and represented result.
+
+```swift
+extension Example.Greeting {
+    public struct Responses: Coder.Protocol {
+        public var body: some Coder.Protocol {
+            Coder.Case(Call.Result.prisms.greet) {
+                HTTP.Representation(.ok, Message.coder)
+            }
         }
     }
 }
 ```
 
-Responses compose independently:
+Alternative representations use `Coder.OneOf`; HTTP does not introduce a
+parallel choice algebra. `HTTP.Representation<Content, Value>` pairs a semantic
+status with a content coder and does not fix the content container.
+
+## Remote and responder interpretation
+
+The remote edge is one whole-domain arrow. The application supplies the
+concrete content and transport choice through one initializer:
 
 ```swift
-HTTP.Response.Coder(Example.Counter.Call.self) {
-    Case(\.increment) {
-        OneOf {
-            HTTP.Response.Status(.badRequest) {
-                HTTP.Response.Body(Example.Counter.Error.text)
-            }
-            HTTP.Response.Status(.ok) {
-                HTTP.Response.Body(Example.Counter.Value.coder)
-            }
-        }
-    }
-}
+let client = Example.Client.Remote(http: transport)
 ```
 
-This separation leaves a normal application seam between routing and response
-transport. Authentication, logging, headers, caching, and other higher-level
-behavior can inspect the request and call, invoke the application, and modify
-the response without being embedded in the route declaration.
+That initializer delegates to `HTTP.client(Example.self, response:transport:)`;
+it contains no endpoint-specific implementation.
 
-Value representations are ordinary declarative coders with `var body`.
-Intrinsic representations use `Coder.Codable`; contextual representations use
-a named coder such as `Example.Counter.Error.text`.
-
-There is no `HTTP.Coding`, `HTTP.Endpoint`, domain `Endpoint` shell, or
-`Operation.Witness` in the example.
-
-## Application
-
-The application owns the live domain interpretation and the assembly step:
+The server edge exposes the same seams independently:
 
 ```swift
-let client = Example.Client.live
-
-let server = HTTP.Server(
-    router: Example.router,
-    respond: { call, request in
-        let response = try await Example.response(to: call, using: client)
-        return response.addingHeader(...)
-    }
-)
-
-let remote = Example.Client.remote(
-    over: server.client,
-    router: Example.router,
-    responses: Example.responses
-)
+let call = try HTTP.route(Example.self, request)
+let result = await Example.Client.live(call)
+let response = try HTTP.response(result, using: Example.Responses())
 ```
 
-Local and remote callers use the same domain-shaped client:
-
-```swift
-let message = try await remote.greeting.greet(.init("Ada"))
-```
-
-The remote failure association remains:
-
-```text
-(transport + coding) + domain refusal
-```
-
-The algebra owns that association. It is not exposed as call-site promotion,
-collapse, or generic ceremony.
+`HTTP.responder` composes those steps when no intermediate application policy
+is needed. Source routing never invokes build, test, package, or wire-framing
+operations.
 
 ## Marginal domain cost
 
-Adding a leaf domain requires:
+Adding one leaf domain requires:
 
-1. Domain values and pure behavior.
-2. One `Signature` declaration.
-3. Intrinsic or named value coders.
-4. One request-router branch.
-5. One response-coder branch.
-6. One live interpreter implementation.
+1. Domain values, refusal, and behavior.
+2. One client signature.
+3. Intrinsic value coders.
+4. One declarative route body.
+5. One response representation branch.
+6. One live implementation.
 
-Root composition adds one property and one branch at each coproduct boundary.
-No transport-specific client mirror is written. The amount of domain-authored
-code is linear in the number of operations; generic interpretation machinery
-is constant.
-
-## Upstream capabilities required
-
-The example assumes, but does not implement upstream during this pass:
-
-- `@Client` support for method and property requirements;
-- `@Calls` derivation of call and result coproducts plus composable case optics;
-- exhaustive generic call interpretation by a derived client;
-- derived remote interpretation preserving the failure algebra;
-- declarative `HTTP.Request.Coder` and indexed `HTTP.Response.Coder` builders;
-- request and response interpretation into generic HTTP client/responder arrows;
-- `var body` coder combinators used by the value representations.
-
-Those capabilities must be implemented at their semantic owners only after
-the call-site syntax is accepted.
+At each composition boundary, the root adds one client property and one route
+branch. Transport clients, responder plumbing, call/result coproducts, prisms,
+coverage, and remote reconstruction are generic or derived once.

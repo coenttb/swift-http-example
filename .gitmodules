@@ -1,9 +1,6 @@
 [submodule "swift-client"]
 	path = swift-client
 	url = https://github.com/swift-foundations/swift-client.git
-[submodule "swift-client-remote"]
-	path = swift-client-remote
-	url = https://github.com/swift-foundations/swift-client-remote.git
 [submodule "swift-witness-derivation"]
 	path = swift-witness-derivation
 	url = https://github.com/swift-foundations/swift-witness-derivation.git
@@ -16,9 +13,18 @@
 [submodule "swift-call-derivation"]
 	path = swift-call-derivation
 	url = https://github.com/swift-foundations/swift-call-derivation.git
-[submodule "swift-algebra-derivation"]
-	path = swift-algebra-derivation
-	url = https://github.com/swift-foundations/swift-algebra-derivation.git
+[submodule "swift-client-derivation"]
+	path = swift-client-derivation
+	url = https://github.com/swift-foundations/swift-client-derivation.git
+[submodule "swift-call"]
+	path = swift-call
+	url = https://github.com/swift-foundations/swift-call.git
+[submodule "swift-coder"]
+	path = swift-coder
+	url = https://github.com/swift-foundations/swift-coder.git
+[submodule "swift-router"]
+	path = swift-router
+	url = https://github.com/swift-foundations/swift-router.git
 [submodule "swift-http"]
 	path = swift-http
 	url = https://github.com/swift-foundations/swift-http.git

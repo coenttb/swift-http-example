@@ -5,9 +5,6 @@
       location = "group:swift-client">
    </FileRef>
    <FileRef
-      location = "group:swift-client-remote">
-   </FileRef>
-   <FileRef
       location = "group:swift-witness-derivation">
    </FileRef>
    <FileRef
@@ -20,13 +17,37 @@
       location = "group:swift-call-derivation">
    </FileRef>
    <FileRef
-      location = "group:swift-algebra-derivation">
+      location = "group:swift-client-derivation">
+   </FileRef>
+   <FileRef
+      location = "group:swift-call">
+   </FileRef>
+   <FileRef
+      location = "group:swift-coder">
+   </FileRef>
+   <FileRef
+      location = "group:swift-router">
    </FileRef>
    <FileRef
       location = "group:swift-http">
    </FileRef>
    <FileRef
+      location = "group:../swift-standards/swift-http-standard">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-9110">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-9111">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-9112">
+   </FileRef>
+   <FileRef
       location = "group:swift-http-coder">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-foundations/swift-http-router">
    </FileRef>
    <FileRef
       location = "group:swift-http-client">
