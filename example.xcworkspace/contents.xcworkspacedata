@@ -23,12 +23,6 @@
       location = "group:swift-call">
    </FileRef>
    <FileRef
-      location = "group:swift-coder">
-   </FileRef>
-   <FileRef
-      location = "group:swift-router">
-   </FileRef>
-   <FileRef
       location = "group:swift-http">
    </FileRef>
    <FileRef
@@ -47,15 +41,6 @@
       location = "group:swift-http-coder">
    </FileRef>
    <FileRef
-      location = "group:../swift-foundations/swift-http-router">
-   </FileRef>
-   <FileRef
-      location = "group:swift-http-client">
-   </FileRef>
-   <FileRef
-      location = "group:swift-http-responder">
-   </FileRef>
-   <FileRef
       location = "group:swift-example">
    </FileRef>
    <FileRef
@@ -66,5 +51,86 @@
    </FileRef>
    <FileRef
       location = "group:swift-example-http">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-atoms/swift-parser">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-atoms/swift-coder">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-optic-coder">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-ascii-coder">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-pair-parser">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-byte-parser">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-binary-leb128">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-binary-parser">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-ascii-parser">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-ascii-serializer">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-binary-serializer">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-byte-serializer">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-bit-vector">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-3986">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-791">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-1035">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-1123">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-4007">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-4291">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-4648">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-5322">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-incits/swift-incits-4-1986">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-5952">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ipv4-standard">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-standards/swift-ipv6-standard">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-radix-formatter">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-set">
    </FileRef>
 </Workspace>
