@@ -20,7 +20,7 @@
 	path = swift-call
 	url = https://github.com/swift-foundations/swift-call.git
 [submodule "swift-coder"]
-	path = swift-coder
+	path = swift-coder-algebra
 	url = https://github.com/swift-foundations/swift-coder.git
 [submodule "swift-router"]
 	path = swift-router
