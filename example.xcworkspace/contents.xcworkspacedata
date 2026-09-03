@@ -136,4 +136,16 @@
    <FileRef
       location = "group:../swift-molecules/swift-set">
    </FileRef>
+   <FileRef
+      location = "group:../swift-atoms/swift-byte">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-atoms/swift-serializer">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-iterator-parser">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-iterator-coder">
+   </FileRef>
 </Workspace>
