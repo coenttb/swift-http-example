@@ -137,6 +137,15 @@
       location = "group:../swift-molecules/swift-set">
    </FileRef>
    <FileRef
+      location = "group:../swift-atoms/swift-cursor">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-cursor-parser">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-cursor-coder">
+   </FileRef>
+   <FileRef
       location = "group:../swift-atoms/swift-byte">
    </FileRef>
    <FileRef
