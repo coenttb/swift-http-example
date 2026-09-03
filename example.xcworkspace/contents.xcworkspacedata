@@ -32,6 +32,9 @@
       location = "group:../swift-standards/swift-ietf/swift-rfc-9110">
    </FileRef>
    <FileRef
+      location = "group:../swift-standards/swift-ietf/swift-rfc-3986-coder">
+   </FileRef>
+   <FileRef
       location = "group:../swift-standards/swift-ietf/swift-rfc-9110-coder">
    </FileRef>
    <FileRef
