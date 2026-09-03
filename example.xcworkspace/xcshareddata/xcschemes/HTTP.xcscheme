@@ -18,7 +18,7 @@
                BlueprintIdentifier = "HTTP Coder"
                BuildableName = "HTTP Coder"
                BlueprintName = "HTTP Coder"
-               ReferencedContainer = "container:swift-http-coder">
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -32,7 +32,7 @@
                BlueprintIdentifier = "HTTP Coder Tests"
                BuildableName = "HTTP Coder Tests"
                BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:swift-http-coder">
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -113,38 +113,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Tests"
-               BuildableName = "Call Tests"
-               BlueprintName = "Call Tests"
-               ReferencedContainer = "container:swift-call">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Derivation Tests"
-               BuildableName = "Call Derivation Tests"
-               BlueprintName = "Call Derivation Tests"
-               ReferencedContainer = "container:swift-call-derivation">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Prism Derivation Tests"
                BuildableName = "Prism Derivation Tests"
                BlueprintName = "Prism Derivation Tests"
-               ReferencedContainer = "container:swift-prism-derivation">
+               ReferencedContainer = "container:../swift-molecules/swift-prism-derivation">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -158,7 +130,7 @@
                BlueprintIdentifier = "Client Derivation Tests"
                BuildableName = "Client Derivation Tests"
                BlueprintName = "Client Derivation Tests"
-               ReferencedContainer = "container:swift-client-derivation">
+               ReferencedContainer = "container:../swift-compositions/swift-client-derivation">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -284,7 +256,7 @@
                BlueprintIdentifier = "HTTP Coder"
                BuildableName = "HTTP Coder"
                BlueprintName = "HTTP Coder"
-               ReferencedContainer = "container:swift-http-coder">
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -298,7 +270,7 @@
                BlueprintIdentifier = "HTTP Coder Tests"
                BuildableName = "HTTP Coder Tests"
                BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:swift-http-coder">
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -379,38 +351,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Tests"
-               BuildableName = "Call Tests"
-               BlueprintName = "Call Tests"
-               ReferencedContainer = "container:swift-call">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Derivation Tests"
-               BuildableName = "Call Derivation Tests"
-               BlueprintName = "Call Derivation Tests"
-               ReferencedContainer = "container:swift-call-derivation">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Prism Derivation Tests"
                BuildableName = "Prism Derivation Tests"
                BlueprintName = "Prism Derivation Tests"
-               ReferencedContainer = "container:swift-prism-derivation">
+               ReferencedContainer = "container:../swift-molecules/swift-prism-derivation">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -424,7 +368,7 @@
                BlueprintIdentifier = "Client Derivation Tests"
                BuildableName = "Client Derivation Tests"
                BlueprintName = "Client Derivation Tests"
-               ReferencedContainer = "container:swift-client-derivation">
+               ReferencedContainer = "container:../swift-compositions/swift-client-derivation">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -555,7 +499,7 @@
                BlueprintIdentifier = "HTTP Coder Tests"
                BuildableName = "HTTP Coder Tests"
                BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:swift-http-coder">
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -596,32 +540,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Tests"
-               BuildableName = "Call Tests"
-               BlueprintName = "Call Tests"
-               ReferencedContainer = "container:swift-call">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Derivation Tests"
-               BuildableName = "Call Derivation Tests"
-               BlueprintName = "Call Derivation Tests"
-               ReferencedContainer = "container:swift-call-derivation">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Prism Derivation Tests"
                BuildableName = "Prism Derivation Tests"
                BlueprintName = "Prism Derivation Tests"
-               ReferencedContainer = "container:swift-prism-derivation">
+               ReferencedContainer = "container:../swift-molecules/swift-prism-derivation">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -632,7 +554,7 @@
                BlueprintIdentifier = "Client Derivation Tests"
                BuildableName = "Client Derivation Tests"
                BlueprintName = "Client Derivation Tests"
-               ReferencedContainer = "container:swift-client-derivation">
+               ReferencedContainer = "container:../swift-compositions/swift-client-derivation">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -720,7 +642,7 @@
                BlueprintIdentifier = "HTTP Coder Tests"
                BuildableName = "HTTP Coder Tests"
                BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:swift-http-coder">
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -761,32 +683,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Tests"
-               BuildableName = "Call Tests"
-               BlueprintName = "Call Tests"
-               ReferencedContainer = "container:swift-call">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Call Derivation Tests"
-               BuildableName = "Call Derivation Tests"
-               BlueprintName = "Call Derivation Tests"
-               ReferencedContainer = "container:swift-call-derivation">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Prism Derivation Tests"
                BuildableName = "Prism Derivation Tests"
                BlueprintName = "Prism Derivation Tests"
-               ReferencedContainer = "container:swift-prism-derivation">
+               ReferencedContainer = "container:../swift-molecules/swift-prism-derivation">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -797,7 +697,7 @@
                BlueprintIdentifier = "Client Derivation Tests"
                BuildableName = "Client Derivation Tests"
                BlueprintName = "Client Derivation Tests"
-               ReferencedContainer = "container:swift-client-derivation">
+               ReferencedContainer = "container:../swift-compositions/swift-client-derivation">
             </BuildableReference>
          </TestableReference>
          <TestableReference

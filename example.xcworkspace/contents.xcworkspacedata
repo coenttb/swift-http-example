@@ -2,28 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:swift-client">
+      location = "group:../swift-compositions/swift-client">
    </FileRef>
    <FileRef
-      location = "group:swift-witness-derivation">
+      location = "group:../swift-molecules/swift-prism-derivation">
    </FileRef>
    <FileRef
-      location = "group:swift-prism-derivation">
+      location = "group:../swift-molecules/swift-eliminator-derivation">
    </FileRef>
    <FileRef
-      location = "group:swift-eliminator-derivation">
+      location = "group:../swift-compositions/swift-client-derivation">
    </FileRef>
    <FileRef
-      location = "group:swift-call-derivation">
-   </FileRef>
-   <FileRef
-      location = "group:swift-client-derivation">
-   </FileRef>
-   <FileRef
-      location = "group:swift-call">
-   </FileRef>
-   <FileRef
-      location = "group:swift-http">
+      location = "group:../swift-compositions/swift-http">
    </FileRef>
    <FileRef
       location = "group:../swift-standards/swift-http-standard">
@@ -47,7 +38,7 @@
       location = "group:../swift-standards/swift-ietf/swift-rfc-9112">
    </FileRef>
    <FileRef
-      location = "group:swift-http-coder">
+      location = "group:../swift-compositions/swift-http-coder">
    </FileRef>
    <FileRef
       location = "group:swift-example">
@@ -156,5 +147,17 @@
    </FileRef>
    <FileRef
       location = "group:../swift-molecules/swift-iterator-coder">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-compositions/swift-signature-derivation">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-atoms/swift-operation">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-coproduct-derivation">
+   </FileRef>
+   <FileRef
+      location = "group:../swift-molecules/swift-product-derivation">
    </FileRef>
 </Workspace>

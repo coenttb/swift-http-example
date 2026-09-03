@@ -19,9 +19,9 @@
 [submodule "swift-call"]
 	path = swift-call
 	url = https://github.com/swift-foundations/swift-call.git
-[submodule "swift-coder"]
+[submodule "swift-coder-algebra"]
 	path = swift-coder-algebra
-	url = https://github.com/swift-foundations/swift-coder.git
+	url = https://github.com/swift-compositions/swift-coder-algebra.git
 [submodule "swift-router"]
 	path = swift-router
 	url = https://github.com/swift-foundations/swift-router.git
