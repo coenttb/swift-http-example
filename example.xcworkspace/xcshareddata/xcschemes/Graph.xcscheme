@@ -1023,6 +1023,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Cursor Standard Library Integration Tests"
+               BuildableName = "Cursor Standard Library Integration Tests"
+               BlueprintName = "Cursor Standard Library Integration Tests"
+               ReferencedContainer = "container:../swift-atoms/swift-cursor">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Client Tests"
                BuildableName = "Client Tests"
                BlueprintName = "Client Tests"
@@ -1555,20 +1569,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Byte Parser Tests"
-               BuildableName = "Byte Parser Tests"
-               BlueprintName = "Byte Parser Tests"
-               ReferencedContainer = "container:../swift-molecules/swift-byte-parser">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Binary LEB128 Tests"
                BuildableName = "Binary LEB128 Tests"
                BlueprintName = "Binary LEB128 Tests"
@@ -1601,20 +1601,6 @@
                BuildableName = "Binary Serializer Tests"
                BlueprintName = "Binary Serializer Tests"
                ReferencedContainer = "container:../swift-molecules/swift-binary-serializer">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Byte Serializer Tests"
-               BuildableName = "Byte Serializer Tests"
-               BlueprintName = "Byte Serializer Tests"
-               ReferencedContainer = "container:../swift-molecules/swift-byte-serializer">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -2646,6 +2632,17 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Cursor Standard Library Integration Tests"
+               BuildableName = "Cursor Standard Library Integration Tests"
+               BlueprintName = "Cursor Standard Library Integration Tests"
+               ReferencedContainer = "container:../swift-atoms/swift-cursor">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Client Tests"
                BuildableName = "Client Tests"
                BlueprintName = "Client Tests"
@@ -3064,17 +3061,6 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Byte Parser Tests"
-               BuildableName = "Byte Parser Tests"
-               BlueprintName = "Byte Parser Tests"
-               ReferencedContainer = "container:../swift-molecules/swift-byte-parser">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Binary LEB128 Tests"
                BuildableName = "Binary LEB128 Tests"
                BlueprintName = "Binary LEB128 Tests"
@@ -3101,17 +3087,6 @@
                BuildableName = "Binary Serializer Tests"
                BlueprintName = "Binary Serializer Tests"
                ReferencedContainer = "container:../swift-molecules/swift-binary-serializer">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Byte Serializer Tests"
-               BuildableName = "Byte Serializer Tests"
-               BlueprintName = "Byte Serializer Tests"
-               ReferencedContainer = "container:../swift-molecules/swift-byte-serializer">
             </BuildableReference>
          </TestableReference>
          <TestableReference

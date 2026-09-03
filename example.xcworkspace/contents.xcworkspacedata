@@ -71,9 +71,6 @@
       location = "group:../swift-molecules/swift-pair-parser">
    </FileRef>
    <FileRef
-      location = "group:../swift-molecules/swift-byte-parser">
-   </FileRef>
-   <FileRef
       location = "group:../swift-molecules/swift-binary-leb128">
    </FileRef>
    <FileRef
@@ -87,9 +84,6 @@
    </FileRef>
    <FileRef
       location = "group:../swift-molecules/swift-binary-serializer">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-byte-serializer">
    </FileRef>
    <FileRef
       location = "group:../swift-molecules/swift-bit-vector">
