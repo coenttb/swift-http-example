@@ -267,6 +267,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Coder Tests"
+               BuildableName = "RFC 5322 Coder Tests"
+               BlueprintName = "RFC 5322 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "RFC 3986 Coder Tests"
                BuildableName = "RFC 3986 Coder Tests"
                BlueprintName = "RFC 3986 Coder Tests"
@@ -2045,6 +2059,17 @@
                BuildableName = "RFC 9110 Coder Tests"
                BlueprintName = "RFC 9110 Coder Tests"
                ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110-coder">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Coder Tests"
+               BuildableName = "RFC 5322 Coder Tests"
+               BlueprintName = "RFC 5322 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322-coder">
             </BuildableReference>
          </TestableReference>
          <TestableReference
