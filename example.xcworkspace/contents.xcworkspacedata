@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../swift-compositions/swift-client">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-prism-derivation">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-eliminator-derivation">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-compositions/swift-client-derivation">
-   </FileRef>
-   <FileRef
       location = "group:../swift-compositions/swift-http">
    </FileRef>
    <FileRef
@@ -53,111 +41,15 @@
       location = "group:swift-example-http">
    </FileRef>
    <FileRef
-      location = "group:../swift-atoms/swift-parser">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-atoms/swift-coder">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-optic-coder">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-ascii-coder">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-pair-parser">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-binary-leb128">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-binary-parser">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-ascii-parser">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-ascii-serializer">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-binary-serializer">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-bit-vector">
-   </FileRef>
-   <FileRef
       location = "group:../swift-standards/swift-ietf/swift-rfc-3986">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-791">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-1035">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-1123">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-4007">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-4291">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-4648">
    </FileRef>
    <FileRef
       location = "group:../swift-standards/swift-ietf/swift-rfc-5322">
    </FileRef>
    <FileRef
-      location = "group:../swift-standards/swift-incits/swift-incits-4-1986">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-5952">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ipv4-standard">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ipv6-standard">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-radix-formatter">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-set">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-atoms/swift-cursor">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-cursor-parser">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-cursor-coder">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-atoms/swift-byte">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-atoms/swift-serializer">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-iterator-parser">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-iterator-coder">
+      location = "group:../swift-atoms/swift-optic">
    </FileRef>
    <FileRef
       location = "group:../swift-compositions/swift-signature-derivation">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-atoms/swift-operation">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-coproduct-derivation">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-molecules/swift-product-derivation">
    </FileRef>
 </Workspace>
