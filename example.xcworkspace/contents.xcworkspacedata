@@ -26,9 +26,6 @@
       location = "group:../swift-standards/swift-ietf/swift-rfc-9112">
    </FileRef>
    <FileRef
-      location = "group:../swift-compositions/swift-http-coder">
-   </FileRef>
-   <FileRef
       location = "group:swift-example">
    </FileRef>
    <FileRef
@@ -45,11 +42,5 @@
    </FileRef>
    <FileRef
       location = "group:../swift-standards/swift-ietf/swift-rfc-5322">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-atoms/swift-optic">
-   </FileRef>
-   <FileRef
-      location = "group:../swift-compositions/swift-signature-derivation">
    </FileRef>
 </Workspace>

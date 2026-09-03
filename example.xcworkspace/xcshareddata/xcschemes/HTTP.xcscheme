@@ -15,34 +15,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HTTP Coder"
-               BuildableName = "HTTP Coder"
-               BlueprintName = "HTTP Coder"
-               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HTTP Coder Tests"
-               BuildableName = "HTTP Coder Tests"
-               BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Example HTTP"
                BuildableName = "Example HTTP"
                BlueprintName = "Example HTTP"
@@ -145,34 +117,6 @@
                BuildableName = "RFC 9110 Tests"
                BlueprintName = "RFC 9110 Tests"
                ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HTTP Coder"
-               BuildableName = "HTTP Coder"
-               BlueprintName = "HTTP Coder"
-               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HTTP Coder Tests"
-               BuildableName = "HTTP Coder Tests"
-               BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -300,17 +244,6 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HTTP Coder Tests"
-               BuildableName = "HTTP Coder Tests"
-               BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Example HTTP Tests"
                BuildableName = "Example HTTP Tests"
                BlueprintName = "Example HTTP Tests"
@@ -370,17 +303,6 @@
                BuildableName = "RFC 9110 Tests"
                BlueprintName = "RFC 9110 Tests"
                ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HTTP Coder Tests"
-               BuildableName = "HTTP Coder Tests"
-               BlueprintName = "HTTP Coder Tests"
-               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
             </BuildableReference>
          </TestableReference>
          <TestableReference
