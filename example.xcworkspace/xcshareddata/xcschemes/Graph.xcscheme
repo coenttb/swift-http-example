@@ -1331,6 +1331,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Framing Tests"
+               BuildableName = "RFC 9112 Framing Tests"
+               BlueprintName = "RFC 9112 Framing Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Parser Tests"
+               BuildableName = "RFC 9112 Parser Tests"
+               BlueprintName = "RFC 9112 Parser Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "HTTP Coder Tests"
                BuildableName = "HTTP Coder Tests"
                BlueprintName = "HTTP Coder Tests"
@@ -2894,6 +2922,28 @@
                BlueprintIdentifier = "RFC 9112 Tests"
                BuildableName = "RFC 9112 Tests"
                BlueprintName = "RFC 9112 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Framing Tests"
+               BuildableName = "RFC 9112 Framing Tests"
+               BlueprintName = "RFC 9112 Framing Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Parser Tests"
+               BuildableName = "RFC 9112 Parser Tests"
+               BlueprintName = "RFC 9112 Parser Tests"
                ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
             </BuildableReference>
          </TestableReference>
