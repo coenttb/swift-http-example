@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "2700"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Operation"
+               BuildableName = "Operation"
+               BlueprintName = "Operation"
+               ReferencedContainer = "container:../swift-atoms/swift-operation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP"
+               BuildableName = "HTTP"
+               BlueprintName = "HTTP"
+               ReferencedContainer = "container:../swift-compositions/swift-http">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Coder"
+               BuildableName = "HTTP Coder"
+               BlueprintName = "HTTP Coder"
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Route Derivation Core"
+               BuildableName = "HTTP Route Derivation Core"
+               BlueprintName = "HTTP Route Derivation Core"
+               ReferencedContainer = "container:../swift-compositions/swift-http-route-derivation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Route Derivation"
+               BuildableName = "HTTP Route Derivation"
+               BlueprintName = "HTTP Route Derivation"
+               ReferencedContainer = "container:../swift-compositions/swift-http-route-derivation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Signature Derivation Core"
+               BuildableName = "Signature Derivation Core"
+               BlueprintName = "Signature Derivation Core"
+               ReferencedContainer = "container:../swift-compositions/swift-signature-derivation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Signature Derivation"
+               BuildableName = "Signature Derivation"
+               BlueprintName = "Signature Derivation"
+               ReferencedContainer = "container:../swift-compositions/swift-signature-derivation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Standard"
+               BuildableName = "HTTP Standard"
+               BlueprintName = "HTTP Standard"
+               ReferencedContainer = "container:../swift-standards/swift-http-standard">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 3986"
+               BuildableName = "RFC 3986"
+               BlueprintName = "RFC 3986"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-3986">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 3986 Coder"
+               BuildableName = "RFC 3986 Coder"
+               BlueprintName = "RFC 3986 Coder"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-3986-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322"
+               BuildableName = "RFC 5322"
+               BlueprintName = "RFC 5322"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Foundation"
+               BuildableName = "RFC 5322 Foundation"
+               BlueprintName = "RFC 5322 Foundation"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Coder"
+               BuildableName = "RFC 5322 Coder"
+               BlueprintName = "RFC 5322 Coder"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9110"
+               BuildableName = "RFC 9110"
+               BlueprintName = "RFC 9110"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9110 Coder"
+               BuildableName = "RFC 9110 Coder"
+               BlueprintName = "RFC 9110 Coder"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9111"
+               BuildableName = "RFC 9111"
+               BlueprintName = "RFC 9111"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9111">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112"
+               BuildableName = "RFC 9112"
+               BlueprintName = "RFC 9112"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Parser"
+               BuildableName = "RFC 9112 Parser"
+               BlueprintName = "RFC 9112 Parser"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Serializer"
+               BuildableName = "RFC 9112 Serializer"
+               BlueprintName = "RFC 9112 Serializer"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Framing"
+               BuildableName = "RFC 9112 Framing"
+               BlueprintName = "RFC 9112 Framing"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example"
+               BuildableName = "Example"
+               BlueprintName = "Example"
+               ReferencedContainer = "container:swift-example">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Greeting"
+               BuildableName = "Example Greeting"
+               BlueprintName = "Example Greeting"
+               ReferencedContainer = "container:swift-example">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Counter"
+               BuildableName = "Example Counter"
+               BlueprintName = "Example Counter"
+               ReferencedContainer = "container:swift-example">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Application"
+               BuildableName = "Example Application"
+               BlueprintName = "Example Application"
+               ReferencedContainer = "container:swift-example-application">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Greeting Client"
+               BuildableName = "Example Greeting Client"
+               BlueprintName = "Example Greeting Client"
+               ReferencedContainer = "container:swift-example-client">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Counter Client"
+               BuildableName = "Example Counter Client"
+               BlueprintName = "Example Counter Client"
+               ReferencedContainer = "container:swift-example-client">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Client"
+               BuildableName = "Example Client"
+               BlueprintName = "Example Client"
+               ReferencedContainer = "container:swift-example-client">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example HTTP"
+               BuildableName = "Example HTTP"
+               BlueprintName = "Example HTTP"
+               ReferencedContainer = "container:swift-example-http">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Operation Tests"
+               BuildableName = "Operation Tests"
+               BlueprintName = "Operation Tests"
+               ReferencedContainer = "container:../swift-atoms/swift-operation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Coder Tests"
+               BuildableName = "HTTP Coder Tests"
+               BlueprintName = "HTTP Coder Tests"
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Route Derivation Tests"
+               BuildableName = "HTTP Route Derivation Tests"
+               BlueprintName = "HTTP Route Derivation Tests"
+               ReferencedContainer = "container:../swift-compositions/swift-http-route-derivation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Signature Derivation Tests"
+               BuildableName = "Signature Derivation Tests"
+               BlueprintName = "Signature Derivation Tests"
+               ReferencedContainer = "container:../swift-compositions/swift-signature-derivation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Standard Tests"
+               BuildableName = "HTTP Standard Tests"
+               BlueprintName = "HTTP Standard Tests"
+               ReferencedContainer = "container:../swift-standards/swift-http-standard">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 3986 Tests"
+               BuildableName = "RFC 3986 Tests"
+               BlueprintName = "RFC 3986 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-3986">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 3986 Coder Tests"
+               BuildableName = "RFC 3986 Coder Tests"
+               BlueprintName = "RFC 3986 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-3986-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Foundation Tests"
+               BuildableName = "RFC 5322 Foundation Tests"
+               BlueprintName = "RFC 5322 Foundation Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Tests"
+               BuildableName = "RFC 5322 Tests"
+               BlueprintName = "RFC 5322 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Coder Tests"
+               BuildableName = "RFC 5322 Coder Tests"
+               BlueprintName = "RFC 5322 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9110 Tests"
+               BuildableName = "RFC 9110 Tests"
+               BlueprintName = "RFC 9110 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9110 Coder Tests"
+               BuildableName = "RFC 9110 Coder Tests"
+               BlueprintName = "RFC 9110 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110-coder">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9111 Tests"
+               BuildableName = "RFC 9111 Tests"
+               BlueprintName = "RFC 9111 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9111">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Tests"
+               BuildableName = "RFC 9112 Tests"
+               BlueprintName = "RFC 9112 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Parser Tests"
+               BuildableName = "RFC 9112 Parser Tests"
+               BlueprintName = "RFC 9112 Parser Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Framing Tests"
+               BuildableName = "RFC 9112 Framing Tests"
+               BlueprintName = "RFC 9112 Framing Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Greeting Tests"
+               BuildableName = "Example Greeting Tests"
+               BlueprintName = "Example Greeting Tests"
+               ReferencedContainer = "container:swift-example">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Counter Tests"
+               BuildableName = "Example Counter Tests"
+               BlueprintName = "Example Counter Tests"
+               ReferencedContainer = "container:swift-example">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Application Tests"
+               BuildableName = "Example Application Tests"
+               BlueprintName = "Example Application Tests"
+               ReferencedContainer = "container:swift-example-application">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Client Tests"
+               BuildableName = "Example Client Tests"
+               BlueprintName = "Example Client Tests"
+               ReferencedContainer = "container:swift-example-client">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example HTTP Tests"
+               BuildableName = "Example HTTP Tests"
+               BlueprintName = "Example HTTP Tests"
+               ReferencedContainer = "container:swift-example-http">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Operation Tests"
+               BuildableName = "Operation Tests"
+               BlueprintName = "Operation Tests"
+               ReferencedContainer = "container:../swift-atoms/swift-operation">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Coder Tests"
+               BuildableName = "HTTP Coder Tests"
+               BlueprintName = "HTTP Coder Tests"
+               ReferencedContainer = "container:../swift-compositions/swift-http-coder">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Route Derivation Tests"
+               BuildableName = "HTTP Route Derivation Tests"
+               BlueprintName = "HTTP Route Derivation Tests"
+               ReferencedContainer = "container:../swift-compositions/swift-http-route-derivation">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Signature Derivation Tests"
+               BuildableName = "Signature Derivation Tests"
+               BlueprintName = "Signature Derivation Tests"
+               ReferencedContainer = "container:../swift-compositions/swift-signature-derivation">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HTTP Standard Tests"
+               BuildableName = "HTTP Standard Tests"
+               BlueprintName = "HTTP Standard Tests"
+               ReferencedContainer = "container:../swift-standards/swift-http-standard">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 3986 Tests"
+               BuildableName = "RFC 3986 Tests"
+               BlueprintName = "RFC 3986 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-3986">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 3986 Coder Tests"
+               BuildableName = "RFC 3986 Coder Tests"
+               BlueprintName = "RFC 3986 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-3986-coder">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Foundation Tests"
+               BuildableName = "RFC 5322 Foundation Tests"
+               BlueprintName = "RFC 5322 Foundation Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Tests"
+               BuildableName = "RFC 5322 Tests"
+               BlueprintName = "RFC 5322 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 5322 Coder Tests"
+               BuildableName = "RFC 5322 Coder Tests"
+               BlueprintName = "RFC 5322 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-5322-coder">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9110 Tests"
+               BuildableName = "RFC 9110 Tests"
+               BlueprintName = "RFC 9110 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9110 Coder Tests"
+               BuildableName = "RFC 9110 Coder Tests"
+               BlueprintName = "RFC 9110 Coder Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9110-coder">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9111 Tests"
+               BuildableName = "RFC 9111 Tests"
+               BlueprintName = "RFC 9111 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9111">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Tests"
+               BuildableName = "RFC 9112 Tests"
+               BlueprintName = "RFC 9112 Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Parser Tests"
+               BuildableName = "RFC 9112 Parser Tests"
+               BlueprintName = "RFC 9112 Parser Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RFC 9112 Framing Tests"
+               BuildableName = "RFC 9112 Framing Tests"
+               BlueprintName = "RFC 9112 Framing Tests"
+               ReferencedContainer = "container:../swift-standards/swift-ietf/swift-rfc-9112">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Greeting Tests"
+               BuildableName = "Example Greeting Tests"
+               BlueprintName = "Example Greeting Tests"
+               ReferencedContainer = "container:swift-example">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Counter Tests"
+               BuildableName = "Example Counter Tests"
+               BlueprintName = "Example Counter Tests"
+               ReferencedContainer = "container:swift-example">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Application Tests"
+               BuildableName = "Example Application Tests"
+               BlueprintName = "Example Application Tests"
+               ReferencedContainer = "container:swift-example-application">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example Client Tests"
+               BuildableName = "Example Client Tests"
+               BlueprintName = "Example Client Tests"
+               ReferencedContainer = "container:swift-example-client">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Example HTTP Tests"
+               BuildableName = "Example HTTP Tests"
+               BlueprintName = "Example HTTP Tests"
+               ReferencedContainer = "container:swift-example-http">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
