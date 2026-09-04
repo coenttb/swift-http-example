@@ -1,12 +1,18 @@
 [submodule "swift-example"]
 	path = swift-example
 	url = https://github.com/swift-institute/swift-example.git
-[submodule "swift-example-client"]
-	path = swift-example-client
-	url = https://github.com/swift-institute/swift-example-client.git
+[submodule "swift-example-signature"]
+	path = swift-example-signature
+	url = https://github.com/swift-institute/swift-example-signature.git
 [submodule "swift-example-http"]
 	path = swift-example-http
 	url = https://github.com/swift-institute/swift-example-http.git
-[submodule "swift-example-application"]
-	path = swift-example-application
-	url = https://github.com/swift-institute/swift-example-application.git
+[submodule "swift-example-client"]
+	path = swift-example-client
+	url = https://github.com/swift-institute/swift-example-client.git
+[submodule "swift-example-cli"]
+	path = swift-example-cli
+	url = https://github.com/swift-institute/swift-example-cli.git
+[submodule "swift-example-server"]
+	path = swift-example-server
+	url = https://github.com/swift-institute/swift-example-server.git

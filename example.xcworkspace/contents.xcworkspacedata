@@ -1,58 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Workspace
-   version = "1.0">
-   <FileRef
-      location = "group:../swift-compositions/swift-http">
+<?xml version='1.0' encoding='UTF-8'?>
+<Workspace version="1.0">
+   <FileRef location="group:../swift-compositions/swift-http">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-http-standard">
+   <FileRef location="group:../swift-standards/swift-http-standard">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-9110">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-9110">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-3986-coder">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-3986-coder">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-5322-coder">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-5322-coder">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-9110-coder">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-9110-coder">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-9111">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-9111">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-9112">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-9112">
    </FileRef>
-   <FileRef
-      location = "group:swift-example">
+   <FileRef location="group:swift-example">
    </FileRef>
-   <FileRef
-      location = "group:swift-example-client">
+   <FileRef location="group:swift-example-http">
    </FileRef>
-   <FileRef
-      location = "group:swift-example-application">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-3986">
    </FileRef>
-   <FileRef
-      location = "group:swift-example-http">
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-5322">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-3986">
+   <FileRef location="group:../swift-atoms/swift-operation">
    </FileRef>
-   <FileRef
-      location = "group:../swift-standards/swift-ietf/swift-rfc-5322">
+   <FileRef location="group:../swift-compositions/swift-signature-derivation">
    </FileRef>
-   <FileRef
-      location = "group:../swift-atoms/swift-operation">
+   <FileRef location="group:../swift-compositions/swift-http-coder">
    </FileRef>
-   <FileRef
-      location = "group:../swift-compositions/swift-signature-derivation">
+   <FileRef location="group:../swift-molecules/swift-checkpoint-coder">
    </FileRef>
-   <FileRef
-      location = "group:../swift-compositions/swift-http-coder">
+   <FileRef location="group:../swift-molecules/swift-operation-coder">
    </FileRef>
-   <FileRef
-      location = "group:../swift-compositions/swift-http-route-derivation">
+   <FileRef location="group:../swift-molecules/swift-string-coder">
    </FileRef>
+   <FileRef location="group:../swift-molecules/swift-tagged-coder">
+   </FileRef>
+   <FileRef location="group:../swift-molecules/swift-carrier-coder">
+   </FileRef>
+   <FileRef location="group:../swift-molecules/swift-byte-coder">
+   </FileRef>
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-9112-coder">
+   </FileRef>
+   <FileRef location="group:../swift-compositions/swift-client">
+   </FileRef>
+   <FileRef location="group:../swift-compositions/swift-client-derivation">
+   </FileRef>
+   <FileRef location="group:../swift-standards/swift-ietf/swift-rfc-9111-coder">
+   </FileRef>
+   <FileRef location="group:swift-example-signature" />
+   <FileRef location="group:swift-example-client" />
+   <FileRef location="group:swift-example-server" />
+   <FileRef location="group:../swift-compositions/swift-http-client" />
 </Workspace>
